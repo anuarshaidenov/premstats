@@ -1,6 +1,6 @@
 import { fetchTeams, fetchTeamsSuccess, fetchTeamsFailed } from './teams';
 
-export const fetchTeamsFromAPI = async (dispatch) => {
+export const fetchTeamsFromAPI = () => async (dispatch) => {
   dispatch(fetchTeams);
 
   try {
