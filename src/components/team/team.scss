@@ -1,0 +1,15 @@
+.team {
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+
+  &__logo {
+    width: 50%;
+    max-width: 120px;
+  }
+}

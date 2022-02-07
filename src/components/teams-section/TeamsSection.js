@@ -1,6 +1,8 @@
+import './teams-section.scss';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchTeamsFromAPI } from '../../redux/teams/thunk';
+import Team from '../team/Team';
 
 const TeamsSection = () => {
   const teams = useSelector((state) => state.teamsReducer.teams);
@@ -11,11 +13,11 @@ const TeamsSection = () => {
     [dispatch, teams.length]
   );
   return (
-    <section className="teams-section">
+    <section className="teams-section container container--small">
       <ul className="teams-section__teams">
         {isLoading && `loading...`}
         {teams.length
-          ? teams.map((team) => <li key={team.team.id}>{team.team.name}</li>)
+          ? teams.map((team) => <Team key={team.team.id} team={team.team} />)
           : null}
       </ul>
     </section>
