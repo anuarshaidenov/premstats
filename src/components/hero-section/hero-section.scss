@@ -1,5 +1,15 @@
+@use '../../styles/colors';
+
 .hero-section {
   padding: 2rem 0 0;
+  background-image: linear-gradient(
+      rgba(colors.$color-primary, 0.9),
+      rgba(colors.$color-secondary, 1)
+    ),
+    url(../../images/old-trafford.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   box-shadow: inset 0px -9px 35px rgba(0, 0, 0, 0.25);
 
   .container {
