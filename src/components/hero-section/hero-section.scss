@@ -1,0 +1,19 @@
+.hero-section {
+  padding: 2rem 0 0;
+  box-shadow: inset 0px -9px 35px rgba(0, 0, 0, 0.25);
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__title {
+    font-size: 4.5rem;
+    text-shadow: 12px -10px 0px rgba(0, 0, 0, 0.35);
+  }
+
+  &__image {
+    width: 35rem;
+  }
+}
