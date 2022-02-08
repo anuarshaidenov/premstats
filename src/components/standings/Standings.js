@@ -11,8 +11,8 @@ const Standings = ({ className, id }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchStandingsFromAPI());
-  }, [dispatch]);
+    !standings.length && dispatch(fetchStandingsFromAPI());
+  }, [dispatch, standings.length]);
 
   return (
     <Card className={`standings ${className ? className : ''}`}>
