@@ -12,6 +12,11 @@
     padding: 1.5rem;
   }
 
+  &__league {
+    grid-row: 1 / 3;
+    padding: 1.5rem;
+  }
+
   &__matches {
     padding: 1.5rem;
     grid-row: 1 / 3;

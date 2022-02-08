@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import TeamForm from '../../components/team-form/TeamForm';
+import TeamLeague from '../../components/team-league/TeamLeague';
 import TeamMatches from '../../components/team-matches/TeamMatches';
 import Team from '../../components/team/Team';
 import { fetchTeamFromAPI } from '../../redux/team/thunk';
@@ -25,6 +26,7 @@ const TeamPage = () => {
         <ul className="team-page__stats">
           <Team team={team.team} />
           <TeamForm form={team.form} className="team-page__form" />
+          <TeamLeague league={team.league} className="team-page__league" />
           <TeamMatches
             className="team-page__matches"
             total={team.fixtures.played.total}
