@@ -3,7 +3,7 @@ const FETCH_TEAM_SUCCESS = 'premstats/team/FETCH_TEAM_SUCCESS';
 const FETCH_TEAM_FAIL = 'premstats/team/FETCH_TEAM_FAIL';
 
 const intitalState = {
-  team: {},
+  team: null,
   isLoading: false,
 };
 
@@ -20,6 +20,17 @@ export const fetchTeamFail = () => ({
   type: FETCH_TEAM_FAIL,
 });
 
-const reducer = (state = intitalState, action) => {};
+const reducer = (state = intitalState, action) => {
+  switch (action.type) {
+    case FETCH_TEAM:
+      return { ...state, isLoading: true };
+    case FETCH_TEAM_SUCCESS:
+      return { isLoading: false, team: action.payload };
+    case FETCH_TEAM_FAIL:
+      return { isLoading: false, team: null };
+    default:
+      return state;
+  }
+};
 
 export default reducer;

@@ -1,0 +1,22 @@
+.team-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__result {
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    &--win {
+      color: green;
+    }
+
+    &--draw {
+      color: grey;
+    }
+
+    &--lose {
+      color: red;
+    }
+  }
+}

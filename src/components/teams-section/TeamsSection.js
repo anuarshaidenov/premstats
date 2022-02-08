@@ -26,7 +26,7 @@ const TeamsSection = () => {
       <form className="teams-section__form">
         <input
           type="text"
-          placeholder="Teams..."
+          placeholder="Team name"
           className="teams-section__input-search"
           value={searchField}
           onChange={handleSearchFieldChange}
@@ -36,7 +36,7 @@ const TeamsSection = () => {
         {isLoading && `loading...`}
         {filteredTeams.length
           ? filteredTeams.map((team) => (
-              <Team key={team.team.id} team={team.team} />
+              <Team key={team.team.id} isLink team={team.team} />
             ))
           : null}
       </ul>

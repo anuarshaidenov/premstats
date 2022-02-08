@@ -8,6 +8,7 @@ export const fetchTeamsFromAPI = (year) => async (dispatch) => {
     const data = await fetchFromAPI(
       `https://v3.football.api-sports.io/teams?league=39&season=${year}`
     );
+    console.log(data);
     dispatch(fetchTeamsSuccess(data.response));
   } catch (e) {
     dispatch(fetchTeamsFailed());

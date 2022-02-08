@@ -1,0 +1,14 @@
+.team-page {
+  padding: 5rem 0;
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  &__form {
+    grid-row: 2/3;
+    padding: 1.5rem;
+  }
+}
