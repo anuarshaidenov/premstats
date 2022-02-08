@@ -12,8 +12,8 @@ const TeamForm = ({ form, className }) => {
 
   return (
     <Card className={`team-form ${className ? className : ''}`}>
-      {formFiltered.map((result) => (
-        <span className={`team-form__result ${generateClass(result)}`}>
+      {formFiltered.map((result, i) => (
+        <span key={i} className={`team-form__result ${generateClass(result)}`}>
           {result}
         </span>
       ))}

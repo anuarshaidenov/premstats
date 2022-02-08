@@ -8,7 +8,6 @@ const TeamGoals = ({
 }) => {
   return (
     <Card className={`team-goals ${className ? className : ''}`}>
-      <h3 className="team-goals__title">Goals Stats</h3>
       <div className="team-goals__section">
         <h4 className="team-goals__subtitle team-goals__subtitle--scored ">
           Goals Scored
