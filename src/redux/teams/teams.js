@@ -1,6 +1,6 @@
-const FETCH_TEAMS = 'FETCH_TEAMS';
-const FETCH_TEAMS_SUCCESS = 'FETCH_TEAMS_SUCCESS';
-const FETCH_TEAMS_FAIL = 'FETCH_TEAMS_FAIl';
+const FETCH_TEAMS = 'premstats/teams/FETCH_TEAMS';
+const FETCH_TEAMS_SUCCESS = 'premstats/teams/FETCH_TEAMS_SUCCESS';
+const FETCH_TEAMS_FAIL = 'premstats/teams/FETCH_TEAMS_FAIl';
 
 const intitalState = {
   teams: [],

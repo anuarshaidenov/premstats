@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import './header.scss';
 
 const Header = () => {
@@ -6,17 +7,12 @@ const Header = () => {
       <div className="container">
         <nav className="header__nav">
           <ul className="header__links">
-            <li className="header__link">Teams</li>
+            <li className="header__link">
+              <NavLink to="/">Teams</NavLink>
+            </li>
             <li className="header__link">Standings</li>
           </ul>
         </nav>
-        <form className="header__form">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="header__input-search"
-          />
-        </form>
       </div>
     </header>
   );

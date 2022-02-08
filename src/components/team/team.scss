@@ -5,8 +5,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1.2rem;
+  transition: transform 0.5s;
   cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   &__logo {
     width: 50%;

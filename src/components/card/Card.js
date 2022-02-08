@@ -1,7 +1,11 @@
 import './card.scss';
 
-const Card = ({ className, children }) => {
-  return <div className={`card ${className || ''}`}>{children}</div>;
+const Card = ({ className, children, handleClick }) => {
+  return (
+    <div onClick={handleClick} className={`card ${className || ''}`}>
+      {children}
+    </div>
+  );
 };
 
 export default Card;
