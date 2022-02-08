@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import TeamForm from '../../components/team-form/TeamForm';
+import TeamMatches from '../../components/team-matches/TeamMatches';
 import Team from '../../components/team/Team';
 import { fetchTeamFromAPI } from '../../redux/team/thunk';
 import './team-page.scss';
@@ -24,6 +25,13 @@ const TeamPage = () => {
         <ul className="team-page__stats">
           <Team team={team.team} />
           <TeamForm form={team.form} className="team-page__form" />
+          <TeamMatches
+            className="team-page__matches"
+            total={team.fixtures.played.total}
+            wins={team.fixtures.wins.total}
+            draws={team.fixtures.draws.total}
+            loses={team.fixtures.loses.total}
+          />
         </ul>
       )}
     </div>

@@ -8,7 +8,12 @@
   }
 
   &__form {
-    grid-row: 2/3;
+    grid-row: 2 / 3;
     padding: 1.5rem;
+  }
+
+  &__matches {
+    padding: 1.5rem;
+    grid-row: 1 / 3;
   }
 }
