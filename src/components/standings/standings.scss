@@ -1,0 +1,17 @@
+@use '../../styles/colors';
+
+.standings {
+  overflow: hidden;
+
+  &__team {
+    padding: 1rem;
+
+    &--highlighted {
+      color: colors.$color-red;
+    }
+
+    &--odd {
+      background-color: lighten(colors.$color-secondary, 20%);
+    }
+  }
+}

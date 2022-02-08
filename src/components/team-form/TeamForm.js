@@ -2,7 +2,7 @@ import Card from '../card/Card';
 import './team-form.scss';
 
 const TeamForm = ({ form, className }) => {
-  const formFiltered = form.slice(0, 5).split('');
+  const formFiltered = form.split('').reverse().slice(0, 5);
 
   const generateClass = (result) => {
     if (result === 'W') return 'team-form__result--win';

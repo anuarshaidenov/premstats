@@ -25,7 +25,7 @@ const reducer = (state = intitalState, action) => {
     case FETCH_TEAM:
       return { ...state, isLoading: true };
     case FETCH_TEAM_SUCCESS:
-      return { isLoading: false, team: action.payload };
+      return { isLoading: false, team: { ...action.payload } };
     case FETCH_TEAM_FAIL:
       return { isLoading: false, team: null };
     default:
