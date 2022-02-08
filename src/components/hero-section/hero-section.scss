@@ -1,7 +1,7 @@
 @use '../../styles/colors';
 
 .hero-section {
-  padding: 2rem 0 0;
+  padding: 10rem 0;
   background-image: linear-gradient(
       rgba(colors.$color-primary, 0.9),
       rgba(colors.$color-secondary, 1)
@@ -16,15 +16,12 @@
   .container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
   }
 
   &__title {
     font-size: 4.5rem;
     text-shadow: 12px -10px 0px rgba(0, 0, 0, 0.35);
-  }
-
-  &__image {
-    width: 35rem;
+    text-align: center;
   }
 }

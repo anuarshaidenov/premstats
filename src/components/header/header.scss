@@ -9,7 +9,7 @@
 
   .container {
     @include flex-ac;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   &__links {
