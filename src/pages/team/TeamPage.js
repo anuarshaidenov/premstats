@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import TeamForm from '../../components/team-form/TeamForm';
 import TeamLeague from '../../components/team-league/TeamLeague';
 import TeamMatches from '../../components/team-matches/TeamMatches';
@@ -13,13 +13,19 @@ const TeamPage = () => {
   const team = useSelector((state) => state.teamReducer.team);
   const isLoading = useSelector((state) => state.teamReducer.isLoading);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(fetchTeamFromAPI(teamID));
   }, [dispatch, teamID]);
 
+  const handleGoBackClick = () => navigate(-1);
+
   return (
     <div className="team-page container container--small">
+      <button onClick={handleGoBackClick} className="team-page__backwards-btn">
+        {'<'}
+      </button>
       {isLoading ? (
         'loading...'
       ) : (
