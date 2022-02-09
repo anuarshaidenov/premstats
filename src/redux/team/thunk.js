@@ -7,7 +7,7 @@ export const fetchTeamFromAPI = (id) => async (dispatch) => {
 
   try {
     const team = await fetchFromAPI(
-      `https://v3.football.api-sports.io/teams/statistics?season=2021&team=${id}&league=39`,
+      `https://api-football-v1.p.rapidapi.com/v3/teams/statistics?league=39&season=2021&team=${id}`,
     );
     console.log(team.response);
     dispatch(fetchTeamSuccess(team.response));

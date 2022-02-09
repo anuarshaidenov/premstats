@@ -11,7 +11,7 @@ export const fetchStandingsFromAPI = () => async (dispatch) => {
 
   try {
     const standings = await fetchFromAPI(
-      'https://v3.football.api-sports.io/standings?league=39&season=2021',
+      'https://api-football-v1.p.rapidapi.com/v3/standings?season=2021&league=39',
     );
     console.log(standings);
     dispatch(
