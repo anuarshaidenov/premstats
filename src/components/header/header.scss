@@ -18,8 +18,12 @@
   }
 
   &__link {
+    &:hover {
+      color: darken($color: #fff, $amount: 20%);
+    }
+
     .active {
-      color: darken($color: #fff, $amount: 50%);
+      color: darken($color: #fff, $amount: 25%);
     }
   }
 }

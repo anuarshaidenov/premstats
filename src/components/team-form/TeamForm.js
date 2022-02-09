@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
 import Card from '../card/Card';
 import './team-form.scss';
 
@@ -6,19 +8,31 @@ const TeamForm = ({ form, className }) => {
 
   const generateClass = (result) => {
     if (result === 'W') return 'team-form__result--win';
-    else if (result === 'D') return 'team-form__result--draw';
-    else return 'team-form__result--lose';
+    if (result === 'D') return 'team-form__result--draw';
+    return 'team-form__result--lose';
   };
 
   return (
-    <Card className={`team-form ${className ? className : ''}`}>
-      {formFiltered.map((result, i) => (
-        <span key={i} className={`team-form__result ${generateClass(result)}`}>
+    <Card className={`team-form ${className || ''}`}>
+      {formFiltered.map((result) => (
+        <span
+          key={uuidv4()}
+          className={`team-form__result ${generateClass(result)}`}
+        >
           {result}
         </span>
       ))}
     </Card>
   );
+};
+
+TeamForm.propTypes = {
+  form: PropTypes.string.isRequired,
+  className: PropTypes.string,
+};
+
+TeamForm.defaultProps = {
+  className: '',
 };
 
 export default TeamForm;

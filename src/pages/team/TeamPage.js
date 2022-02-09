@@ -25,30 +25,34 @@ const TeamPage = () => {
 
   return (
     <div className="team-page container container--small">
-      <button onClick={handleGoBackClick} className="team-page__backwards-btn">
+      <button
+        type="button"
+        onClick={handleGoBackClick}
+        className="team-page__backwards-btn"
+      >
         {'<'}
       </button>
       {isLoading
         ? 'loading...'
         : team && (
-            <div className="team-page__stats">
-              <Team team={team.team} />
-              <TeamForm form={team.form} className="team-page__form" />
-              <TeamMatches
-                className="team-page__matches"
-                total={team.fixtures.played.total}
-                wins={team.fixtures.wins.total}
-                draws={team.fixtures.draws.total}
-                loses={team.fixtures.loses.total}
-              />
-              <TeamGoals
-                scored={team.goals.for.total}
-                conceded={team.goals.against.total}
-                className="team-page__goals"
-              />
-              <Standings className="team-page__standings" id={team.team.id} />
-            </div>
-          )}
+        <div className="team-page__stats">
+          <Team team={team.team} />
+          <TeamForm form={team.form} className="team-page__form" />
+          <TeamMatches
+            className="team-page__matches"
+            total={team.fixtures.played.total}
+            wins={team.fixtures.wins.total}
+            draws={team.fixtures.draws.total}
+            loses={team.fixtures.loses.total}
+          />
+          <TeamGoals
+            scored={team.goals.for.total}
+            conceded={team.goals.against.total}
+            className="team-page__goals"
+          />
+          <Standings className="team-page__standings" id={team.team.id} />
+        </div>
+        )}
     </div>
   );
 };

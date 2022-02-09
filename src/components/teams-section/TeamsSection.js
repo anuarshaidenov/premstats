@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import './teams-section.scss';
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
@@ -12,14 +13,12 @@ const TeamsSection = () => {
 
   useEffect(
     () => !teams.length && dispatch(fetchTeamsFromAPI(2021)),
-    [dispatch, teams.length]
+    [dispatch, teams.length],
   );
 
   const handleSearchFieldChange = (e) => setSearchField(e.target.value);
 
-  const filteredTeams = teams.filter((team) =>
-    team.team.name.toLowerCase().includes(searchField.toLowerCase())
-  );
+  const filteredTeams = teams.filter((team) => team.team.name.toLowerCase().includes(searchField.toLowerCase()));
 
   return (
     <section className="teams-section container container--small">
@@ -33,11 +32,11 @@ const TeamsSection = () => {
         />
       </form>
       <ul className="teams-section__teams">
-        {isLoading && `loading...`}
+        {isLoading && 'loading...'}
         {filteredTeams.length
           ? filteredTeams.map((team) => (
-              <Team key={team.team.id} isLink team={team.team} />
-            ))
+            <Team key={team.team.id} isLink team={team.team} />
+          ))
           : null}
       </ul>
     </section>

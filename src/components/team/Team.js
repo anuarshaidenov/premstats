@@ -1,8 +1,9 @@
 import './team.scss';
-import Card from '../card/Card';
+import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
+import Card from '../card/Card';
 
-const Team = ({ team: { id, name, logo }, isLink }) => {
+const Team = ({ team: { id, name, logo }, isLink = false }) => {
   const navigate = useNavigate();
 
   return (
@@ -14,6 +15,19 @@ const Team = ({ team: { id, name, logo }, isLink }) => {
       <h4 className="team__name">{name}</h4>
     </Card>
   );
+};
+
+Team.propTypes = {
+  team: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    logo: PropTypes.string.isRequired,
+  }).isRequired,
+  isLink: PropTypes.bool,
+};
+
+Team.defaultProps = {
+  isLink: false,
 };
 
 export default Team;
