@@ -1,0 +1,27 @@
+@use '../../styles/colors';
+
+.hero-section {
+  padding: 10rem 0;
+  background-image: linear-gradient(
+      rgba(colors.$color-primary, 0.9),
+      rgba(colors.$color-secondary, 1)
+    ),
+    url(../../images/old-trafford.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  box-shadow: inset 0px -9px 35px rgba(0, 0, 0, 0.25);
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 4.5rem;
+    text-shadow: 2px -5px 0px rgba(0, 0, 0, 0.55);
+    text-align: center;
+  }
+}

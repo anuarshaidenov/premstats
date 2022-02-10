@@ -1,0 +1,34 @@
+@use '../../styles/colors';
+
+.standings {
+  overflow: hidden;
+  font-weight: 700;
+
+  &__team {
+    padding: 1rem;
+    border-bottom: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  &__team-rank {
+    width: 5%;
+  }
+
+  &__team-logo {
+    max-width: 2rem;
+    margin-right: 1rem;
+  }
+
+  &__team-name {
+    width: 30%;
+    &--highlighted {
+      color: colors.$color-green;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use '../../styles/colors';
+
+.team-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__result {
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    &--win {
+      color: colors.$color-green;
+    }
+
+    &--draw {
+      color: colors.$color-grey;
+    }
+
+    &--lose {
+      color: colors.$color-red;
+    }
+  }
+}
