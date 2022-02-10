@@ -47,7 +47,7 @@ To run the project on your local machine you need to have:
 
 Go to the terminal and type:
 
-- `git clone https://github.com/Marcraphael12/premstats.git [YOUR_PROJECT_NAME]`
+- `git clone https://github.com/anuarshaidenov/premstats.git [YOUR_PROJECT_NAME]`
 - `cd [YOUR_PROJECT_NAME]`
 - `npm install`
 
@@ -57,7 +57,7 @@ To start a local server on port 3000 run:
 
 - `npm start`
 
-## Authors
+## Author
 
 👤 **Anuar Shaidenov**
 
