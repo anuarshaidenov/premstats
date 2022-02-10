@@ -69,6 +69,10 @@ To start a local server on port 3000 run:
 - Twitter: [@anuarnyi](https://twitter.com/anuarnyi)
 - LinkedIn: [anuarshaidenov](https://linkedin.com/in/anuarshaidenov)
 
+## Acknowledgements
+
+Design inpired by [Nelson Sakwa](<https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)>)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
