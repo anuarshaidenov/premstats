@@ -5,10 +5,13 @@
 > This is a web app that displays current stats of your favorite Premier League team.
 
 <div>
-<img alt="main screenshot" src='./screenshot-1.png' width=70%/>
+<img alt="main screenshot" src='./screenshot-1.png' width=90%/>
 </div>
 <div>
-<img alt="my profile page" src='./screenshot-2.png' width=70%/>
+<img alt="my profile page" src='./screenshot-2.png' width=90%/>
+</div>
+<div>
+<img alt="my profile page" src='./screenshot-3.png' width=90%/>
 </div>
 
 ## Built With
@@ -24,7 +27,10 @@
 
 ## Live Demo
 
-[Live Demo Link](https://premstats.herokuapp.com/)
+> Warning! The API has limit of 100 requests per day!
+
+[Live Demo Link (Netlify)](https://premstats.netlify.app/)
+[Live Demo Link (Heroku)](https://premstats.herokuapp.com/)
 
 ## Getting Started
 
@@ -41,7 +47,7 @@ To run the project on your local machine you need to have:
 
 Go to the terminal and type:
 
-- `git clone https://github.com/Marcraphael12/Space-traveler-s-hub.git [YOUR_PROJECT_NAME]`
+- `git clone https://github.com/Marcraphael12/premstats.git [YOUR_PROJECT_NAME]`
 - `cd [YOUR_PROJECT_NAME]`
 - `npm install`
 
