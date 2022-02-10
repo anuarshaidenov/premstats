@@ -24,7 +24,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://spacetravelerhub.netlify.app/)
+[Live Demo Link](https://premstats.herokuapp.com/)
 
 ## Getting Started
 

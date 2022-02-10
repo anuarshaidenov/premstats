@@ -4,7 +4,7 @@ export const fetchFromAPI = async (link) => {
     method: 'GET',
     headers: {
       'x-rapidapi-host': 'api-football-v1.p.rapidapi.com',
-      'x-rapidapi-key': '8a4e1540a9msha3f8fbb81f60c99p1d2f0bjsn953d1dfe8cc9',
+      'x-rapidapi-key': process.env.REACT_APP_API_KEY,
     },
   });
   const data = await res.json();
