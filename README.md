@@ -25,6 +25,10 @@
 - Sass
 - React Testing Library
 
+## Video Presentation
+
+[Video Presentation Link](https://www.loom.com/share/7104a0c8db8f4f5b840de80220809569)
+
 ## Live Demo
 
 > Warning! The API has limit of 100 requests per day!
