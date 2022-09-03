@@ -12,7 +12,7 @@ export const fetchTeamsFromAPI = () => async (dispatch) => {
     const data = await fetchFromAPI(
       `https://api-football-v1.p.rapidapi.com/v3/teams?league=39&season=${currentYear}`,
     );
- 
+
     console.log(data);
     dispatch(fetchTeamsSuccess(data.response));
   } catch (e) {
